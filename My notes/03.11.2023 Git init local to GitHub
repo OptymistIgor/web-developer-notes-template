@@ -9,3 +9,8 @@ Generate SSH key see Github docks generate ssh key!
 Add SSH key to Github Seting -> SSH and GPG keys -> add ssh key
 End first
 git push (git push --set-upstream origin master) Rush changes to server
+
+git branch -M main
+if error 
+git log --oneline
+git push --set-upstream origin !!!master!!! error change main
