@@ -1,0 +1,11 @@
+Git 
+(If you need install git)
+git init (initialization)
+git add . (add files)
+git commit -m "name commit"
+The first one
+git remote add origit <name> <url> (The name and url copy from repoz.Github)
+Generate SSH key see Github docks generate ssh key!
+Add SSH key to Github Seting -> SSH and GPG keys -> add ssh key
+End first
+git push (git push --set-upstream origin master) Rush changes to server
