@@ -1,0 +1,8 @@
+Додивився відео по closure
+
+по роботі:
+тре зробити 4стрічки, з жирним заголовком, і з текстом, та посиланням.
+
+дивитись MemberAboutPoints
+//font-weight: bold;
+<b>Website: </b> <a href="http://www.conmute.com" _blank> 'http://www.conmute.com' </a>

@@ -1,0 +1,178 @@
+TailwindCHEAT
+SHEET
+
+https://nerdcave.com/tailwind-cheat-sheet
+
+
+and plugin VSCode
+Tailwind Intelisense
+https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
+
+
+Use classNameFactory special for style
+
+export const displayHeading = ({
+    faded = false,
+    level = 2,
+}: {
+    faded?: boolean
+    level?: 1 | 2
+}) => {
+    const defaults = 'font-heading font-bold text-3xl lg:text-5xl'
+    if (level === 1 && !faded)
+        return 'font-heading font-bold text-4xl lg:text-7xl'
+    if (level === 1 && faded)
+        return 'font-heading font-bold text-3xl lg:text-6xl opacity-60'
+    if (level === 2 && !faded) return defaults
+    if (level === 2 && faded)
+        return 'font-heading font-bold text-2xl lg:text-4xl opacity-60'
+    return defaults
+}
+
+export const displayReading = ({
+    faded,
+    sm,
+}: {
+    faded?: boolean
+    sm?: boolean
+}) => {
+    if (sm && faded) return 'font-body text-lg lg:text-2xl opacity-60'
+    if (faded) return 'font-body text-xl lg:text-3xl opacity-60'
+    if (sm) return 'font-body text-xl lg:text-3xl'
+    return 'font-body text-2xl lg:text-4xl'
+}
+
+export const commonHeading = ({
+    level = 2,
+    faded,
+}: {
+    faded?: boolean
+    level?: 1 | 2
+}) => {
+    const defaults = 'font-heading font-bold text-base lg:text-xl'
+    if (level === 1 && !faded)
+        return 'font-heading font-bold text-lg lg:text-2xl'
+    if (level === 1 && faded)
+        return 'font-heading font-bold text-base lg:text-xl opacity-60'
+    if (level === 2 && !faded) return defaults
+    if (level === 2 && faded)
+        return 'font-heading font-bold text-sm lg:text-lg opacity-60'
+    return defaults
+}
+
+export const commonReading = ({
+    sm,
+    faded,
+}: {
+    faded?: boolean
+    sm?: boolean
+}) => {
+    if (sm && faded) return 'font-body text-xxs lg:text-xs opacity-60'
+    if (faded) return 'font-body text-xs lg:text-sm opacity-60'
+    if (sm) return 'font-body text-xs lg:text-sm'
+    return 'font-body text-sm lg:text-base'
+}
+
+export const contentHeading = ({
+    level,
+    faded,
+}: {
+    level?: 1 | 2
+    faded?: boolean
+}) => {
+    const defaults = 'font-heading font-bold text-lg lg:text-3xl'
+    if (level === 1 && !faded)
+        return 'font-heading font-bold text-2xl lg:text-4xl'
+    if (level === 1 && faded)
+        return 'font-heading font-bold text-xl lg:text-3xl opacity-60'
+    if (level === 2 && !faded) return defaults
+    if (level === 2 && faded)
+        return 'font-heading font-bold text-base lg:text-2xl opacity-60'
+    return defaults
+}
+
+export const contentReading = ({
+    leading,
+    faded,
+    sm,
+}: {
+    leading?: boolean
+    faded?: boolean
+    sm?: boolean
+}) => {
+    const defaults = 'font-body text-base lg:text-xl'
+    if (leading && faded) return 'font-body text-lg lg:text-xl opacity-60'
+    if (leading) return 'font-body text-xl lg:text-2xl'
+    if (faded && sm) return 'font-body text-xs lg:text-base'
+    if (faded) return 'font-body text-sm lg:text-lg opacity-60'
+    if (sm) return 'font-body text-sm lg:text-lg'
+    return defaults
+}
+
+export const system = ({ faded }: { faded?: boolean }) => {
+    if (faded) return 'font-body text-lxs lg:text-xxs opacity-60'
+    return 'font-body text-xxs lg:text-xs'
+}
+
+export const small = ({ faded }: { faded?: boolean }) => {
+    if (faded) return 'font-body text-lxs opacity-60'
+    return 'font-body text-xxs'
+}
+
+
+Use global CSS 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* COLORS: custom */
+    --color-primary: rgba(24, 28, 50, 1);
+    --color-success: rgba(74, 181, 142, 1);
+    --color-error: rgba(229, 56, 85, 1);
+
+    --color-text: rgba(51, 51, 51, 1);
+    --color-text-light: rgba(94, 98, 120, 1);
+    --color-dark-text: rgba(255, 255, 255, 1);
+    --color-text-faded: rgba(161, 165, 183, 1);
+
+    --color-bg: rgba(249, 250, 253, 1);
+    --color-bg-lighter: rgba(255, 255, 255, 1);
+    --color-dark-bg: rgba(24, 28, 50, 1);
+    --color-dark-bg-lighter: rgba(30, 33, 52, 1);
+
+    --color-border: rgba(228, 230, 239, 1);
+
+    /* GAPS: 4px base */
+    --gap-2xl: 128px;
+    --gap-xl: 64px;
+    --gap-lg: 32px;
+    --gap-md: 16px;
+    --gap-sm: 8px;
+    --gap-xs: 4px;
+
+    /* WIDTH - Inheriting TailWind, update tailwind config*/
+    --width-sm: 640px;
+    --width-md: 768px;
+    --width-lg: 1024px;
+    --width-xl: 1280px;
+    --width-2xl: 1536px;
+}
+
+.effect-style-block-shadow {
+    box-shadow: 9px 56px 80px rgba(0, 0, 0, 0.001),
+        0px 23.4px 33.4px rgba(0, 0, 0, 0.05),
+        0px 12.5px 17.9px rgba(0, 0, 0, 0.041),
+        0px 7px 10px rgba(0, 0, 0, 0.035), 0px 3.7px 5.3px rgba(0, 0, 0, 0.028),
+        0px 1.5px 2.2px rgba(0, 0, 0, 0.02);
+}
+
+.effect-style-dark-block-shadow {
+    box-shadow: 9px 56px 80px rgba(255, 255, 255, 0.001),
+        0px 23.4px 33.4px rgba(255, 255, 255, 0.05),
+        0px 12.5px 17.9px rgba(255, 255, 255, 0.041),
+        0px 7px 10px rgba(255, 255, 255, 0.035),
+        0px 3.7px 5.3px rgba(255, 255, 255, 0.028),
+        0px 1.5px 2.2px rgba(255, 255, 255, 0.02);
+}

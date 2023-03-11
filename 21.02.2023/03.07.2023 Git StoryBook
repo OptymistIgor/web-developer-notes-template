@@ -1,0 +1,28 @@
+Перенесення проекту, створення нового ключа з e-mail
+Інсталяція brew, storybook, pnpm
+запуск storybook:
+nvm use
+pnpm run storybook
+
+дивись, зайшов в компоненти щоб працювати, а тут червоне, та і де на реакті.
+Parsing error: Cannot read file '/users/ihor/conmution/delve-network-system/tsconfig.json'.eslint
+
+Рішення:
+добав папку delve.network напряму в workspace
+сам еррор про себе говорить
+що якась тулза не бачить tsconfig якого там і в помині не повинно бути
+Add Folder to Workspace і вибираєш папку delve.network
+Це delve-network-system де буде багато чого, не один проект а геть УСЕ
+
+!!!WoW!!! Роман крут, як сталеві яйка Зелоенського!
+
+storybook
+https://www.youtube.com/watch?v=qogIildW4jk&ab_channel=%D0%9A%D1%83%D1%80%D1%81React%D0%B4%D0%BB%D1%8F%D0%BF%D0%BE%D1%87%D0%B0%D1%82%D0%BA%D1%96%D0%B2%D1%86%D1%96%D0%B2%D0%B2%D1%96%D0%B4VitaliiRuban
+https://www.youtube.com/watch?v=lUf8qC_xFHo&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%9D%D0%B5%D0%BF%D0%BE%D0%BC%D0%BD%D1%8F%D1%89%D0%B8%D0%B9
+https://storybook.js.org/docs/react/writing-docs/docs-page
+
+https://medium.com/@mishanep/storybook-%D0%B4%D0%BB%D1%8F-react-%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9-fc87728930a8?p=fc87728930a8
+
+
+
+читай код часто + пиши код згідного того що прочитав = стабільний консистентий код який буде легко підтримувати

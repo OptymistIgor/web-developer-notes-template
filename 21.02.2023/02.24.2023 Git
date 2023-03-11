@@ -1,0 +1,77 @@
+//...
+Робота з git 
+//...
+
+https://dzone.com/articles/top-20-git-commands-with-examples
+
+https://habr.com/ru/company/ruvds/blog/599929/
+
+https://codeguida.com/post/453
+
+ihor.optymist@gmail.com
+
+
+задати імя, привязавши коміти до імені.
+git config --global user.name "Ihor Optymist"
+
+Щоб постійно не вводити імя
+git config --global credential.helper cache
+
+Ініціалізація
+git init
+
+
+Add all files
+git add .
+
+
+This command lists all the files that have to be committed.
+Просмотреть статус нужного репозитория можно по ключевому слову status: его действие распространяется на подготовленные, 
+неподготовленные и неотслеживаемые файлы.
+git status
+
+This command records or snapshots the file permanently in the version history.
+При создании коммита в репозитории можно добавить однострочное сообщение с помощью параметра
+git commit -m "Your short summary about the commit"
+
+Push to server
+git push
+
+
+//...
+And English
+//...
+
+неправильні дієслова, тренуючи не лише пам’ять, а й вимову.
+
+https://greenforest.com.ua/journal/read/sekreti-vivchennya-nepravilnih-disliv
+https://youtu.be/LmdK2PKoC9w
+
+EnglishDom Webinar 
+To Do Mix
+Present simple
+Past
+Futures
+
+Litle time DuoLingvo
+
+
+Work to day.
+Media css
+https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_features
+
+https://developer.mozilla.org/ru/docs/Web/CSS/Media_Queries/Using_media_queries
+
+https://www.youtube.com/watch?v=hsWDI_Xv3fk&ab_channel=ITDoctor
+
+
+Git 30 commands
+https://habr.com/ru/company/ruvds/blog/599929/
+
+
+проект тепер має новий адрес, його переніс від свого особистого репозиторію в організацію
+там треба буде змінити урлу на сервері
+git remote -v  дивимося, які є
+
+міняємо урл
+git remote set-url origin git@github.com:DelveNetwork/delve-network-system.git
