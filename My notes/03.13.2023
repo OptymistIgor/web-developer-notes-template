@@ -1,0 +1,69 @@
+замість classNames працюємо з clsx
+https://github.com/lukeed/clsx
+
+classNames
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export const classNames = (classNames: { [key: string]: boolean }) => {
+    return Object.entries(classNames)
+        .reduce(
+            (acc, [className, shouldAdd]) =>
+                shouldAdd ? [...acc, className] : acc,
+            []
+        )
+        .join(' ')
+}
+
+Example use Typografy
+
+
+import React from 'react'
+
+import {
+    displayHeading,
+    displayReading,
+    contentReading,
+    small,
+    Typography,
+} from 'src/components/Typography'
+import { clsx } from 'clsx'
+import style from './MemberTags.module.css'
+
+export type MemberTagsProps = {
+    title: string
+    href?: string
+    asLinks?: boolean
+    onClick?: () => void
+}
+
+export const MemberTags = ({
+    title,
+    onClick,
+    asLinks,
+    href,
+    children,
+    ...rest
+}: MemberTagsProps & { children?: React.ReactNode }): JSX.Element => {
+    // className={[displayReading({}), style.title].join(
+    //     ' '
+    // )}
+
+    const className = clsx(style.tag, small({}))
+    if (href) {
+        return (
+            <a href={href} className={className} {...rest}>
+                {children}
+            </a>
+        )
+    }
+    return (
+        <div className={className} {...rest}>
+            <Typography kind="small" as="span">
+                sds
+            </Typography>
+            <Typography as="span" kind="small">
+                {children}
+            </Typography>
+        </div>
+    )
+}
+
