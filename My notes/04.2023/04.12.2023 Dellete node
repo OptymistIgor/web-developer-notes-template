@@ -1,0 +1,11 @@
+Dellete node 
+rm --rf ./node_modules
+
+Install node
+pnpm install
+
+install radix-ui
+
+pnpm add @radix-ui/react-checkbox
+
+nvm use

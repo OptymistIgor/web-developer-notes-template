@@ -1,0 +1,2 @@
+git config core.ignorecase false
+щоб git розпізнавав верхній та нижній регістр також
