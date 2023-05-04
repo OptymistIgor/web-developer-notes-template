@@ -1,2 +1,14 @@
 git config core.ignorecase false
 щоб git розпізнавав верхній та нижній регістр також
+
+https://dmitripavlutin.com/access-object-properties-javascript/
+
+3 Ways To Access Object Properties in JavaScript
+
+Dot property accessor: object.property
+Square brackets property accessor: object['property']
+Object destructuring: const { property } = object
+
+
+Добавив у вітку пришвидшений генератор компоненти згідно темплейту який в нас є
+просто введи pnpm generate component ComponentName і в src/component/ComponentName буде створено з усіма змінами
