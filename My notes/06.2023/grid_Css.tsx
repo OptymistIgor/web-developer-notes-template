@@ -1,3 +1,6 @@
+//https://css-tricks.com/snippets/css/complete-guide-grid/
+//https://developer.mozilla.org/ru/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
+
 // Todo:
 /* как работать с вложениями div в div с помощью grid css */
 
@@ -65,3 +68,31 @@
 //     grid-column: 1 / span 2; /* занимает первый и второй столбцы */
 //   }
   
+
+// Second up
+/* как работать с вложениями div в div с помощью grid css */
+
+{/* <div className={style.container}>
+    <div className={style.header}>
+   
+        <div className={style.intro}>
+  
+            <div className={style.avatar}>
+  
+                <div className={style.tags}>
+                  <div className={style.tag1} />
+<div className={style.tag2} />
+<div className={style.tag3} />
+                    <div className={style.background}></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div className={style.main}>Main </div>
+    <div className={style.sidebar}>Sidebar</div>
+</div>  
+1 разместить в верху, первым элементом, на всю ширину екрана background 
+2 разместить avatar под background и верхних 30%  контейреа avatar наложить на нижнюю часть background
+3 разместить tags по правому краю от avatar поверх background, используя 30% области заданих от avatar, не заходя на avatar.
+4 разместить intro по правому краю от avatar, ниже background
+5 разместить sidebar по правому краю от intro, ниже background */}
