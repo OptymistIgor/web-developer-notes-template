@@ -1,5 +1,6 @@
 //https://css-tricks.com/snippets/css/complete-guide-grid/
 //https://developer.mozilla.org/ru/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
+// https://medium.com/star-gazers/css-grid-layout-ef82a7c6b85c
 
 // Todo:
 /* как работать с вложениями div в div с помощью grid css */
@@ -96,3 +97,54 @@
 3 разместить tags по правому краю от avatar поверх background, используя 30% области заданих от avatar, не заходя на avatar.
 4 разместить intro по правому краю от avatar, ниже background
 5 разместить sidebar по правому краю от intro, ниже background */}
+
+
+// .individualMember {
+//     /* display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     grid-template-rows: repeat(4);
+//     grid-column-gap: 10px;
+//     grid-row-gap: 1em; */
+// }
+
+// .heading {
+//     /* display: grid;
+//     grid-column: 1 / 4;
+//     grid-row: 1 / 3;
+
+//     grid-template-columns: subgrid;
+//     grid-template-rows: subgrid; */
+// }
+
+// .detailsAboutMemberSection {
+//     /* display: grid;
+//     grid-column: 2 / 3;
+//     grid-row: 3 /4; */
+// }
+
+// .sidebar {
+//     /* grid-column: 3 / 4;
+//     grid-row: 3 /4; */
+// }
+
+// .memberBackGround {
+//     /* display: grid;
+//     grid-template-columns: 1 / 4;
+//     grid-template-rows: 1/2;
+
+//     order: -4; */
+// }
+
+// .avatar {
+//     /* display: grid;
+//     grid-column-start: 1;
+//     grid-row-start: 2;
+//     grid-row-end: 4;
+//     z-index: 2; */
+// }
+
+// /*.tags {
+//      display: grid;
+//     grid-column: 2 / 3;
+//     grid-row: 2/ 3;
+// } */
