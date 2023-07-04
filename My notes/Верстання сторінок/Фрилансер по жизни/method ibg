@@ -1,0 +1,50 @@
+Применение класса "ibg" // «Фрилансер по жизни»
+
+CSS
+.ibg{
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+position: relative;
+}
+.ibg img{
+width: 0;
+height: 0;
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0;
+visibility: hidden;
+}
+
+
+
+JS
+
+function ibg(){
+let ibg=document.querySelectorAll(".ibg");
+for (var i = 0; i < ibg.length; i++) {
+if(ibg[i].querySelector('img')){
+ibg[i].style.backgroundImage = 'url('+ibg[i].querySelector('img').getAttribute('src')+')';
+}
+}
+}
+ibg();
+
+
+
+
+
+JQery
+
+function ibg(){
+$.each($('.ibg'), function(index, val) {
+if($(this).find('img').length>0){
+$(this).css('background-image','url("'+$(this).find('img').attr('src')+'")');
+}
+});
+}
+ibg()
+
+Шпаргалка является дополнением к выпуску «Адаптивные изображения. Практические приемы верстки картинок. CSS object-fit HTML picture»
+https://www.youtube.com/watch?v=nTtuiBXKp88&ab_channel=%D0%A4%D1%80%D1%96%D0%BB%D0%B0%D0%BD%D1%81%D0%B5%D1%80%D0%BF%D0%BE%D0%B6%D0%B8%D1%82%D1%82%D1%8E
