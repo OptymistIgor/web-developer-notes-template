@@ -14,9 +14,8 @@ let user0 = users[0];
  console.log(user0.age);
  console.log(user0['age']);
 
- 
+
  console.log(users[0].skills[2]);
  console.log(users['skills'][2]);
- console.log();
 
  
